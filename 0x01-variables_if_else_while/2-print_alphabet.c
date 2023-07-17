@@ -4,13 +4,13 @@
  * Return: 0 (success)
  */
 
-int main()
+int main(void)
 {
 	char c;
 
 	c = 'a';
 	while 
-		(c <= 'x') {
+		(c <= 'z') {
 			putchar(c);
 			c++;
 		}
