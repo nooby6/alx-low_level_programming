@@ -1,21 +1,20 @@
 #include "main.h"
-#include <unistd.h>
 
-/**
- * print_alphabet - Entry point
- * Return:0 (succes)
- */
 
-void print_alphabet(void)
-{
-	char c = 'a';
+	/**
+	 * print_alphabet - print all alphabet in lowercase
+	 */
 
-	while (c <= 'z')
+
+	void print_alphabet(void)
 	{
-		_putchar(c);
-		c++;
+		char letter;
 
+
+		for (letter = 'a'; letter <= 'z'; letter++)
+			int putchar(letter);
+
+
+		int putchar('\n');
 	}
-	_putchar('\n');
 
-}
