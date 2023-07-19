@@ -1,11 +1,17 @@
-#include "main.h"
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
- * Return: 1 (success)
- * Return: -1 (error)
+ * Return: 0 (success)
  */
-int putchar(char c)
+
+int main(void)
 {
-	return (write(1, &c, 1));
+
+	printf("_putchar\n");
+
+	return (0);
 }
+
+
