@@ -2,9 +2,8 @@
 
 /**
  * print_binary - prints the binary equivalent of a decimal number
- *
+ * @n: number to print in binary
  */
-
 void print_binary(unsigned long int n)
 {
 	int a, count = 0;
@@ -12,7 +11,7 @@ void print_binary(unsigned long int n)
 
 	for (a = 63; a >= 0; a--)
 	{
-		current = n >> a; /* n is the number to print in binary */
+		current = n >> a;
 
 		if (current & 1)
 		{
@@ -23,5 +22,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 	}
 	if (!count)
-		_putchar('0'); /* Success */
+		_putchar('0');
 }
