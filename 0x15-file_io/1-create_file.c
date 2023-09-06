@@ -18,6 +18,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (!filename)
 	return (-1);
+
 	/* First we open the file using the open call */
 	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
@@ -26,14 +27,18 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		while
-			(text_content[cont]);
+		for (; text_content[cont]; cont++);
 		count++;
+
 		result = write(file, text_content, count);
-	}
+	
 	if (result == -1)
 	{
 		close(file);
+		return (-1);
 	}
+	}
+
+	close(file);
 	return (1);
 }
