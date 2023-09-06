@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <unistd.h>/* For read write and close */
+#include <fcntl.h>/*for open and O_RDONLY */
 
 /**
  * read_textfile - the function that reads and prints a text file.
@@ -39,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	_write = write(POSIX, buffer, _read);
+	_write = write(STDOUT_FILENO, buffer, _read);
 	if (_write == -1)
 	{
 		free(buffer);
